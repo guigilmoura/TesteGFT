@@ -3,6 +3,8 @@ package testeTecnico;
 import java.util.Scanner;
 
 public class Questao03 {
+    public static Trabalhador[] trabalhadores;
+
     public static void questao03(){
         int indice = 1;
         int qtdeTrabalhadores = 0;
@@ -13,7 +15,7 @@ public class Questao03 {
             qtdeTrabalhadores = scan.nextInt();
             if (qtdeTrabalhadores > 4) x = false;
         }
-        Trabalhador[] trabalhadores = new Trabalhador[qtdeTrabalhadores];
+        trabalhadores = new Trabalhador[qtdeTrabalhadores];
         for (int i = 1;i <= qtdeTrabalhadores; i++) {
             System.out.println("entre o nome do trabalhador "+ indice);
             String nome = scan.next();
@@ -25,10 +27,21 @@ public class Questao03 {
             indice ++;
             trabalhadores[i] = trabalhador;
         }
-        //public static void consultar(String info){
 
-        // }
-        //EU PRETENDIA CRIAR UM MÉTODO CONSULTAR() PARA FAZER AS CONSULTAS DE FORMA ORGANIZADA, MAS
-        //ACABEI FICANDO SEM TEMPO!
+        //Utilizar os métodos abaixo para as consultas específicas
+
     }
+    public static void consultarNome(int indice){
+        System.out.println(Questao03.trabalhadores[indice].getNome());
+    }
+    public static void consultarHorasTrabalhadas(int indice){
+        System.out.println(Questao03.trabalhadores[indice].getHorasTrabalhadas());
+    }
+    public static void consultarSalarioHora(int indice){
+        System.out.println(Questao03.trabalhadores[indice].getSalarioPorHora());
+    }
+    public static void consultarSalarioTotal(int indice){
+        System.out.println(Questao03.trabalhadores[indice].getSalarioPorHora()*Questao03.trabalhadores[indice].getHorasTrabalhadas());
+    }
+
 }
