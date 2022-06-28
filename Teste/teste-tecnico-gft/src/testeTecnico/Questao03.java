@@ -15,7 +15,7 @@ public class Questao03 {
         }
         for (int i = 1;i <= qtdeTrabalhadores; i++) {
             System.out.println("entre o nome do trabalhador "+ indice);
-            String nome = scan.nextLine();
+            String nome = scan.next();
             System.out.println("entre o salario por hora do trabalhador " + indice);
             Double salarioHora = scan.nextDouble();
             System.out.println("entre o numero de horas trabalhadas do trabalhador " + indice);
